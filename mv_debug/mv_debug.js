@@ -19,6 +19,14 @@
 
 function Clipboard(filters) {
     this.clip = nw.Clipboard.get();
+
+    if (filters.length === 0) {
+        filters.push({
+            regex: new RegExp("\s+", 'g'),
+            replacement: ""
+        });
+    }
+
     this.filters = filters;
 }
 
