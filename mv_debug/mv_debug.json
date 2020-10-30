@@ -1,0 +1,12 @@
+{
+    "copy_clipboard": true,
+    "clipboard_filters": [
+        {
+            "regex": "((\\s)|(.C\\[\\d+\\]))"
+        },
+        {
+            "regex": ".q\\[([^,]+),\\d+\\]",
+            "replacement": "$1"
+        }
+    ]
+}
